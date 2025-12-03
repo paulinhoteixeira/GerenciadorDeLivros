@@ -6,15 +6,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Biblioteca</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <script src="./script.js" defer></script>
-    <title>Minha Biblioteca</title>
 </head>
 
 <body>
+    <header>
+        <div id="my-library">
+            <img src="./assets/open-book.svg" alt="Icone de um livro aberto">
+            <h1>Minha Biblioteca</h1>
+        </div>
+
+        <button>
+            <img src="./assets/plus.svg" alt="Ícone de adição">
+            Adicionar livro
+        </button> 
+
+        <div id="dashboard">
+            <div class="dash-cards">
+                <p class="dash-number">5</p>
+                <p class="dash-status">Total</p>
+            </div>
+            <div class="dash-cards">
+                <p class="dash-number">5</p>
+                <p class="dash-status">Quero ler</p>
+            </div>
+            <div class="dash-cards">
+                <p class="dash-number">5</p>
+                <p class="dash-status">Lendo</p>
+            </div>
+            <div class="dash-cards">
+                <p class="dash-number">5</p>
+                <p class="dash-status">Lido</p>
+            </div>
+        </div>
+
+        <div id="search">
+            <img src="./assets/search.svg" alt="Ícone de lupa">
+            <input type="text" placeholder="Buscar por título ou autor...">
+
+            <select name="status" id="status-select">
+                <option value="">Todos os status</option>
+                <option value="">Quero ler</option>
+                <option value="">Lendo</option>
+                <option value="">Lido</option>
+            </select>
+
+        </div>
+    </header>
     
 
 </body>
