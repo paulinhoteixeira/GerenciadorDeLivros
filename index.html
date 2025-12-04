@@ -17,14 +17,17 @@
 <body>
     <header>
         <div id="my-library">
-            <img src="./assets/open-book.svg" alt="Icone de um livro aberto">
-            <h1>Minha Biblioteca</h1>
+            <div id="logo">
+                <img src="./assets/open-book.svg" alt="Icone de um livro aberto">
+                <h1>Minha Biblioteca</h1>
+            </div>
+            
+            <button id="add-book">
+                <img src="./assets/plus.svg" alt="Ícone de adição">
+                Adicionar livro
+            </button> 
         </div>
 
-        <button>
-            <img src="./assets/plus.svg" alt="Ícone de adição">
-            Adicionar livro
-        </button> 
 
         <div id="dashboard">
             <div class="dash-cards">
@@ -32,30 +35,34 @@
                 <p class="dash-status">Total</p>
             </div>
             <div class="dash-cards">
-                <p class="dash-number">5</p>
+                <p class="dash-number">2</p>
                 <p class="dash-status">Quero ler</p>
             </div>
             <div class="dash-cards">
-                <p class="dash-number">5</p>
+                <p class="dash-number">2</p>
                 <p class="dash-status">Lendo</p>
             </div>
             <div class="dash-cards">
-                <p class="dash-number">5</p>
+                <p class="dash-number">1</p>
                 <p class="dash-status">Lido</p>
             </div>
         </div>
 
-        <div id="search">
-            <img src="./assets/search.svg" alt="Ícone de lupa">
-            <input type="text" placeholder="Buscar por título ou autor...">
 
+        <div id="search">
+            <div id="search-titles">
+                <img src="./assets/search.svg" alt="Ícone de lupa">
+                <input type="text" placeholder="Buscar por título ou autor...">
+
+            </div>
+            
+            
             <select name="status" id="status-select">
                 <option value="">Todos os status</option>
                 <option value="">Quero ler</option>
                 <option value="">Lendo</option>
                 <option value="">Lido</option>
             </select>
-
         </div>
     </header>
     
