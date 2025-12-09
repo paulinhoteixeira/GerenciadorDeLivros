@@ -36,12 +36,11 @@ input::placeholder {
 
     #logo {
         display: flex;
-        font-size: 1rem;
         align-items: center;
         gap: 1.2rem;
 
         h1 {
-            width: 17rem;
+            font-size: 1.6rem;
         }
     }
 }
@@ -164,7 +163,54 @@ input::placeholder {
         &::-ms-expand {
             display: none;
         }
+    }
+}
 
+main{
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--gray-400);
+
+    p{
+        margin-top: 4.8rem;
+        text-align: center;
+    }
+}
+
+.review {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.review .star {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.review .star:hover {
+    transform: scale(1.12);
+}
+
+@media (max-width: 575.98px) {
+    html {
+        padding: 3.2rem 1.6rem;
     }
 
+    #add-book {
+        font-size: 1.2rem;
+    }
+
+    #dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #search {
+        flex-direction: column;
+    gap: .8rem;
+
+    }
 }

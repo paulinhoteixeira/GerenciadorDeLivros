@@ -7,9 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Biblioteca</title>
-    
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
     <script src="./script.js" defer></script>
 </head>
@@ -21,11 +23,11 @@
                 <img src="./assets/open-book.svg" alt="Icone de um livro aberto">
                 <h1>Minha Biblioteca</h1>
             </div>
-            
+
             <button id="add-book">
                 <img src="./assets/plus.svg" alt="Ícone de adição">
                 Adicionar livro
-            </button> 
+            </button>
         </div>
 
 
@@ -55,8 +57,8 @@
                 <input type="text" placeholder="Buscar por título ou autor...">
 
             </div>
-            
-            
+
+
             <select name="status" id="status-select">
                 <option value="">Todos os status</option>
                 <option value="">Quero ler</option>
@@ -65,7 +67,30 @@
             </select>
         </div>
     </header>
-    
+
+    <main>
+        <!-- <p>Nenhum livro adicionado ainda. Comece adicionando seu primeiro livro!</p> -->
+
+        <div class="book-cards" data-book-id="roube-artista">
+            <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
+
+            <section class="infos">
+                <p class="title">Roube como um artista</p>
+                <p class="author">Austin Kleon</p>
+            </section>
+
+            <p class="tag">Lido</p>
+
+            <section class="review" data-rating="0">
+                <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
+                <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
+                <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
+                <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
+                <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
+            </section>
+        </div>
+    </main>
+
 
 </body>
 
