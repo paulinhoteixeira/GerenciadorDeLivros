@@ -14,10 +14,18 @@
 
     --navy-dark: #211F42;
     --navy-low: #030213;
+
+    --green-base: #016630;
+    --green-light: #DCFCE7;
+    --yellow-base: #894B00;
+    --yellow-light: #FEF9C2;
+    --blue-base: #193CB8;
+    --blue-light: #DBEAFE;
+    --red-bright: #D4183D;
+
 }
 
 html {
-    width: 100vw;
     height: 100%;
     padding: 3.2rem 6.4rem;
 }
@@ -45,7 +53,7 @@ input::placeholder {
     }
 }
 
-/* buttons */
+
 
 #add-book {
     display: flex;
@@ -166,27 +174,116 @@ input::placeholder {
     }
 }
 
-main{
-    margin-top: 2.4rem;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: var(--gray-400);
+main {
 
-    p{
-        margin-top: 4.8rem;
+    #empty {
+        color: var(--gray-400);
         text-align: center;
+     
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+        
+        margin-top: 4.8rem;
+    }
+
+    #books {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        gap: 2.4rem;
+        margin-top: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--gray-400);
+
+    }
+
+
+
+}
+
+.book-cards {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    padding: 1.6rem 1.6rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    background: #FFF;
+
+    >img {
+        height: 26rem;
+        align-self: stretch;
+        aspect-ratio: 49/65;
+        border-radius: .8rem;
+
+        margin-bottom: 1.6rem;
+
+        border-radius: 8px;
+
+    }
+
+    .infos {
+        .title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 150%;
+            color: var(--gray-500);
+        }
+
+        .author {
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            color: var(--gray-400);
+        }
+    }
+
+    .tag {
+        display: flex;
+        width: fit-content;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 8px;
+
+        margin: 1.2rem 0 .8rem;
+
+
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 133.333%;
+
+    }
+
+    .read {
+        color: var(--green-base);
+        background: var(--green-light);
+    }
+
+    .reading {
+        color: var(--yellow-base);
+        background: var(--yellow-light);
+    }
+
+    .to-read {
+        color: var(--blue-base);
+        background: var(--blue-light);
     }
 }
 
 .review {
     display: flex;
     gap: 5px;
-    margin-top: 10px;
 }
 
 .review .star {
-    width: 26px;
-    height: 26px;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
     transition: transform 0.15s;
 }
@@ -194,6 +291,74 @@ main{
 .review .star:hover {
     transform: scale(1.12);
 }
+
+
+.comment p {
+    color: var(--gray-400);
+
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+
+    margin: .8rem 0 2.4rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* número de linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.buttons {
+    display: flex;
+    padding: .8rem;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    button {
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        border-radius: .8rem;
+        border: 1px solid var(--gray-200);
+        background: #FFF;
+
+        color: var(--gray-500);
+
+
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.857%;
+
+        cursor: pointer;
+
+    }
+
+    button:hover {
+        background: var(--gray-100);
+    }
+
+    .trash {
+        color: var(--red-bright);
+    }
+
+    button img {
+        width: 1.6rem;
+        height: 1.6rem;
+        aspect-ratio: 1/1;
+    }
+
+}
+
+
 
 @media (max-width: 575.98px) {
     html {
@@ -210,7 +375,37 @@ main{
 
     #search {
         flex-direction: column;
-    gap: .8rem;
+        gap: .8rem;
 
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .book-cards {
+        width: 100%;
+
+        >img {
+            height: 40.6rem;
+            align-self: stretch;
+            aspect-ratio: 49/65;
+
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            background: #Fff;
+
+        }
+
+        .buttons {
+            padding: 0;
+            margin-bottom: .8rem;
+
+            button {
+                width: 100%;
+            }
+        }
     }
 }
