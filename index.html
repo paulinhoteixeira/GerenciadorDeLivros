@@ -24,7 +24,7 @@
                 <h1>Minha Biblioteca</h1>
             </div>
 
-            <button id="add-book">
+            <button id="add-book" class="add-book-btn">
                 <img src="./assets/plus.svg" alt="Ícone de adição">
                 Adicionar livro
             </button>
@@ -69,193 +69,76 @@
     </header>
 
     <main>
-        <p id="empty">Nenhum livro adicionado ainda. Comece adicionando seu primeiro livro!</p>
+        <p id="empty" class="">Nenhum livro adicionado ainda. Comece adicionando seu primeiro livro!</p>
 
         <div id="books">
-            <!-- 
-                    <div class="book-cards" data-book-id="roube-artista">
-                        <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
-            
-                        <section class="infos">
-                            <p class="title">Roube como um artista</p>
-                            <p class="author">Austin Kleon</p>
-                        </section>
-            
-                        <p class="tag reading">Lendo</p>
-            
-                        <section class="review" data-rating="0">
-                            <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
-                        </section>
-            
-                        <section class="comment">
-                            <p >Este é um texto longo que ultrapassa duas linhas. Quando você passar o mouse por cima, todo o conteúdo deve se tornar visível, escondendo os três pontinhos e mostrando o restante do texto de forma elegante apenas com CSS.</p>
-            
-                        </section>
-            
-                        <div class="buttons">
-                            <button class="edit">
-                                <img src="./assets/pen.svg" alt="Ícone de um lápis">
-                                Editar
-                            </button>
-            
-                            <button class="trash">
-                                <img src="./assets/trash.svg" alt="Ícone de um Lixo">
-                                Excluir
-                            </button>
-                        </div>
-                    </div>
-            
-                     <div class="book-cards" data-book-id="roube-artista">
-                        <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
-            
-                        <section class="infos">
-                            <p class="title">Roube como um artista</p>
-                            <p class="author">Austin Kleon</p>
-                        </section>
-            
-                        <p class="tag read">Lido</p>
-                        
-                        <section class="review" data-rating="0">
-                            <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
-                        </section>
-                        <section class="comment">
-                            <p >Este é um texto longo que ultrapassa duas linhas. Quando você passar o mouse por cima, todo o conteúdo deve se tornar visível, escondendo os três pontinhos e mostrando o restante do texto de forma elegante apenas com CSS.</p>
-            
-                        </section>
-                        <div class="buttons">
-                            <button class="edit">
-                                <img src="./assets/pen.svg" alt="Ícone de um lápis">
-                                Editar
-                            </button>
-            
-                            <button class="trash">
-                                <img src="./assets/trash.svg" alt="Ícone de um Lixo">
-                                Excluir
-                            </button>
-                        </div>
-            
-                    </div>
-            
-                     <div class="book-cards" data-book-id="roube-artista">
-                        <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
-            
-                        <section class="infos">
-                            <p class="title">Roube como um artista</p>
-                            <p class="author">Austin Kleon</p>
-                        </section>
-            
-                        <p class="tag to-read">Quero ler</p>
-            
-                        <section class="review" data-rating="0">
-                            <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
-                        </section>
-            
-                        <section class="comment">
-                            <p >Este é um texto longo que ultrapassa duas linhas. Quando você passar o mouse por cima, todo o conteúdo deve se tornar visível, escondendo os três pontinhos e mostrando o restante do texto de forma elegante apenas com CSS.</p>
-            
-                        </section>
-            
-                        <div class="buttons">
-                            <button class="edit">
-                                <img src="./assets/pen.svg" alt="Ícone de um lápis">
-                                Editar
-                            </button>
-            
-                            <button class="trash">
-                                <img src="./assets/trash.svg" alt="Ícone de um Lixo">
-                                Excluir
-                            </button>
-                        </div>
-            
-                    </div>
-            
-                     <div class="book-cards" data-book-id="roube-artista">
-                        <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
-            
-                        <section class="infos">
-                            <p class="title">Roube como um artista</p>
-                            <p class="author">Austin Kleon</p>
-                        </section>
-            
-                        <p class="tag">Lido</p>
-            
-                        <section class="review" data-rating="0">
-                            <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
-                        </section>
-            
-                        <section class="comment">
-                            <p >Este é um texto longo que ultrapassa duas linhas. Quando você passar o mouse por cima, todo o conteúdo deve se tornar visível, escondendo os três pontinhos e mostrando o restante do texto de forma elegante apenas com CSS.</p>
-            
-                        </section>
-            
-                        <div class="buttons">
-                            <button class="edit">
-                                <img src="./assets/pen.svg" alt="Ícone de um lápis">
-                                Editar
-                            </button>
-            
-                            <button class="trash">
-                                <img src="./assets/trash.svg" alt="Ícone de um Lixo">
-                                Excluir
-                            </button>
-                        </div>
-                    </div>
-            
-                      <div class="book-cards" data-book-id="roube-artista">
-                        <img src="https://m.media-amazon.com/images/I/51lI9is-gnL._SY342_.jpg" alt="Capa do Livro: ">
-            
-                        <section class="infos">
-                            <p class="title">Roube como um artista</p>
-                            <p class="author">Austin Kleon</p>
-                        </section>
-            
-                        <p class="tag">Lido</p>
-            
-                        <section class="review" data-rating="0">
-                            <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
-                            <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
-                        </section>
-            
-                        <section class="comment">
-                            <p >Este é um texto longo que ultrapassa duas linhas. Quando você passar o mouse por cima, todo o conteúdo deve se tornar visível, escondendo os três pontinhos e mostrando o restante do texto de forma elegante apenas com CSS.</p>
-            
-                        </section>
-            
-                        <div class="buttons">
-                            <button class="edit">
-                                <img src="./assets/pen.svg" alt="Ícone de um lápis">
-                                Editar
-                            </button>
-            
-                            <button class="trash">
-                                <img src="./assets/trash.svg" alt="Ícone de um Lixo">
-                                Excluir
-                            </button>
-                        </div>
-                    </div> -->
-
 
         </div>
     </main>
+
+
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- Modal -->
+    <div id="bookModal" class="modal hidden">
+        <div class="modal-content">
+
+            <!-- Botão fechar -->
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+
+            <h2>Adicionar Livro</h2>
+
+            <form id="bookForm">
+                <div class="form-group">
+                    <label>Título *</label>
+                    <input type="text" id="title" placeholder="Digite o título do livro" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Autor *</label>
+                    <input type="text" id="author" placeholder="Digite o nome do autor" required />
+                </div>
+
+                <div class="form-group">
+                    <label>URL da Imagem</label>
+                    <input type="text" id="cover" placeholder="URL da capa do livro (opcional)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="status" required>
+                        <option value="Quero ler">Quero ler</option>
+                        <option value="Lendo">Lendo</option>
+                        <option value="Lido">Lido</option>
+                    </select>
+                </div>
+
+                <label for="modalReview">Avaliação</label>
+                <section class="review" id="modalReview" data-rating="0">
+                    <img class="star" data-value="1" src="./assets/empty-star.svg" alt="">
+                    <img class="star" data-value="2" src="./assets/empty-star.svg" alt="">
+                    <img class="star" data-value="3" src="./assets/empty-star.svg" alt="">
+                    <img class="star" data-value="4" src="./assets/empty-star.svg" alt="">
+                    <img class="star" data-value="5" src="./assets/empty-star.svg" alt="">
+                </section>
+
+                <div class="form-group">
+                    <label>Comentário</label>
+                    <textarea id="comment" rows="2" placeholder="Suas anotações sobre o livro (opcional)"></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelBtn" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-add">Adicionar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
 
 
 </body>
