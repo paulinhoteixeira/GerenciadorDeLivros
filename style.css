@@ -177,6 +177,7 @@ input::placeholder {
 }
 
 main {
+    padding-bottom: 3.2rem;
 
     #empty {
         color: var(--gray-400);
@@ -470,12 +471,18 @@ label {
 
     font-family: "Inter", sans-serif;
 
-    color: var(--gray-400);
+    color: var(--gray-500);
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 142.857%;
-
 }
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-400);
+    opacity: 1;
+}
+
 
 section#modalReview.review {
     margin-bottom: 16px;
@@ -555,7 +562,14 @@ section#modalReview.review {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
+
+        #books {
+            display: flex;
+            flex-direction: column;
+        }
     }
+
+
 
     .book-cards {
         width: 100%;
