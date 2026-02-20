@@ -154,6 +154,7 @@ function enableDeleteButtons() {
             const books = getBooksFromStorage().filter(b => b.id != bookId);
             saveBooksToStorage(books);
             emptyLibrary(countBooks())
+            refreshDashboard()
         }
     });
 
@@ -259,6 +260,7 @@ form.addEventListener("submit", function (e) {
 
     clearRatingBtn.classList.add("hidden");
     emptyLibrary(countBooks())
+    refreshDashboard()
 
 
     closeModal();
@@ -275,6 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Número de cards:", countBooks());
     emptyLibrary(countBooks())
+    refreshDashboard()
 });
 
 
@@ -351,3 +354,20 @@ clearRatingBtn.addEventListener("click", () => {
 
 
 enableEditButtons();
+
+
+
+const totalDashboard = document.getElementById("total");
+const toReadDashboard = document.getElementById("to-read");
+const readingDashboard = document.getElementById("reading");
+const readDashboard = document.getElementById("read");
+
+
+function refreshDashboard(){
+    totalDashboard.textContent = countBooks();
+    
+    toReadDashboard.textContent = document.querySelectorAll('#books .book-cards .to-read').length;
+    readingDashboard.textContent = document.querySelectorAll('#books .book-cards .reading').length;
+    readDashboard.textContent = document.querySelectorAll('#books .book-cards .read').length;
+    
+}
